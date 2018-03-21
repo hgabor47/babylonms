@@ -4,7 +4,7 @@ git checkout -b c#
 git add .
 git commit -m "c# branch"
 git push origin c# 
-copy .gitignore_all .gitignore
 git checkout master
+copy .gitignore_all .gitignore
 
 
