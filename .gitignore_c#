@@ -1,0 +1,15 @@
+# Download this file using PowerShell v3 under Windows with the following comand:
+# Invoke-WebRequest https://gist.githubusercontent.com/kmorcinek/2710267/raw/ -OutFile .gitignore
+# or wget:
+# wget --no-check-certificate http://gist.githubusercontent.com/kmorcinek/2710267/raw/.gitignore
+
+
+# Build results
+[Ee]xamples/
+[Mm]ain/[Aa]ndroid/
+[Mm]ain/[Cc]++/
+[Mm]ain/[Pp]ython
+[Mm]ain/[Cc]python
+[Mm]ain/[Dd]elphi
+[Mm]ain/[Ff]reepascal
+[Mm]ain/[Jj]avascript
