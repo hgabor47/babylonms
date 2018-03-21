@@ -1,4 +1,4 @@
-﻿/* !!!Need to compile with "allow unsafe" code in project build options!!!
+﻿/* !!!!Need to compile with "allow unsafe" code in project build options!!!
  * 
  * Any others:
  * The ship has uniq identifier UUID
