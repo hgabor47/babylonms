@@ -1,4 +1,4 @@
-This is an examples directory for C# developments.
+This is examples directory for C# developments by BabylonMS.
 
 
 1. Get a UUID for your app (https://www.uuidgenerator.net/)
