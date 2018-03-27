@@ -117,8 +117,7 @@ namespace PrelimutensChat
     }
 
     class SendR
-    {
-        static string UUIDSendR = "6acb9f40-05a1-4ba6-8d79-dab265529dca";
+    {        
         BabylonMS.BabylonMS bms;
         public BabylonMS.BMSEventSessionParameter Session;        
         

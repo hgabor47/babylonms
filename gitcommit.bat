@@ -1,5 +1,5 @@
 @echo off
-echo Commit across all modules if you are granted.
+echo Commit if you are granted.
 SET /P message=Please enter your commit message:
 git add .
 git commit -m "%message%"

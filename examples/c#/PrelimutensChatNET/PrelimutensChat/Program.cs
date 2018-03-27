@@ -8,8 +8,8 @@ namespace PrelimutensChat
 {
     static class Program
     {
-        public static string instanceUUID = "e7bdb39f-c2c1-447b-b528-4b9a40757e90";
-        public static string shipUUID = "3a5c1559-91d3-4307-8fe2-5c159390e84d";
+        public static string instanceUUID = "fcf1009e-ff19-43ec-9b8b-ef1ae9565f1b";
+        public static string shipUUID = "fd3e39c4-ff45-4d63-a2a7-d59e386cdaed";
         //public static string[] Args;
         public static Form1 gui;
 
