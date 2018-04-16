@@ -35,7 +35,7 @@ Station-- Miniship
 	|-- Miniship
 
 
-![ConfigPatternImage](https://byblonms.com/babylonms/en/img/pattern.png "BMS Design pattern")
+![ConfigPatternImage](http://babylonms.com/babylonms/en/img/patterns.png "BMS Design pattern")
 
 
 
