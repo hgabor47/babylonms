@@ -64,6 +64,7 @@ Special field types
 
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -85,8 +86,55 @@ namespace BabylonMS
     {
 
         #region Varibles, Consts
+        [StructLayout(LayoutKind.Sequential)]
+        private struct FILETIME
+        {
+            public uint dwLowDateTime;
+            public uint dwHighDateTime;
+        }
+
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+        private struct WIN32_FIND_DATA
+        {
+            public uint dwFileAttributes;
+            public FILETIME ftCreationTime;
+            public FILETIME ftLastAccessTime;
+            public FILETIME ftLastWriteTime;
+            public uint nFileSizeHigh;
+            public uint nFileSizeLow;
+            public uint dwReserved0;
+            public uint dwReserved1;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 260)]
+            public string cFileName;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 14)]
+            public string cAlternateFileName;
+        }
         [DllImport("Shell32.dll")]
         public static extern int ShellExecuteA(IntPtr hwnd, string lpOperation, string lpFile, string lpParameters, string lpDirecotry, int nShowCmd);
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
+        private static extern IntPtr FindFirstFile(string lpFileName, out WIN32_FIND_DATA lpFindFileData);
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode)]
+        private static extern int FindNextFile(IntPtr hFindFile, out WIN32_FIND_DATA lpFindFileData);
+        [DllImport("kernel32.dll")]
+        private static extern bool FindClose(IntPtr hFindFile);
+        public static string[] GetPipes()
+        {
+            WIN32_FIND_DATA data;
+            //List<String> pip = new List<String>();
+            List<String> pip = new List<String>();
+
+            IntPtr handle = FindFirstFile(@"\\.\pipe\*", out data);
+            if (handle != new IntPtr(-1))
+            {
+                do
+                    pip.Add(data.cFileName);
+                    //Console.WriteLine(data.cFileName);
+                while (FindNextFile(handle, out data) != 0);
+                FindClose(handle);
+                return pip.ToArray();
+            }
+            return null;
+        }
 
         public const byte CONST_VERSION = 1;
         public const string CONST_MARKER = "Prelimutens";
@@ -448,7 +496,8 @@ namespace BabylonMS
         {
             process = null;
             string startpath = Directory.GetCurrentDirectory();
-            String[] listOfPipes = System.IO.Directory.GetFiles(@"\\.\pipe\");
+            //String[] listOfPipes = System.IO.Directory.GetFiles(@"\\.\pipe\");  //this occured argumentexception in several OS-es
+            String[] listOfPipes = GetPipes();  //this works all of the system
             string found = Array.Find(listOfPipes, element => element.EndsWith(pipename));
             if (found != null)
             {
