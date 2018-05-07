@@ -14,7 +14,7 @@
  *
  * If no parameter then write help and exit
  
-     https://docs.google.com/document/d/1AaLC5kUbeizOW730QE3NK-NNb6GpgpdfWzwgjiq35eQ/edit#bookmark=id.tytknolw0e4s
+     https://docs.google.com/document/d/1WCO1LIKFsgogwxMCd3_swTEcugHRPed3W1RHwuEDSXo/edit#bookmark=id.tytknolw0e4s
      
      PACK
 
