@@ -36,4 +36,5 @@ digraph finite_state_machine {
 	node [shape = pentagon color="lightgray"];
 	Station01 -> Miniship011 [ label = "pipe" ];	
 
+
 }
