@@ -37,7 +37,7 @@ Station-- Miniship
 	|-- Miniship
 
 
-![ConfigPatternImage](https://prelimutens.com/main/babylonms/babylonmssite/en/img/patterns.png "BMS Design pattern")
+![ConfigPatternImage](https://prelimutens.com/main/babylonms/babylonmssite/img/patterns.png "BMS Design pattern")
 
 
 The Miniships can connect to either station or other miniships.
