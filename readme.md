@@ -1,9 +1,9 @@
 Babylon Message Swap
 ====================
 
-I would like to present my concept that’s aim is to help you develop softwares which is written different programming languages and that can intercommunicate with each other. 
+I would like to present my concept thatâ€™s aim is to help you develop softwares which is written different programming languages and that can intercommunicate with each other. 
 
-More information on Babylon website on (http://babylonms.com)
+More information on Babylon website on (https://prelimutens.com/main/babylonms/babylonmssite/doc/index.html)
 
 
 Quick access
@@ -37,11 +37,11 @@ Station-- Miniship
 	|-- Miniship
 
 
-![ConfigPatternImage](http://babylonms.com/babylonms/en/img/patterns.png "BMS Design pattern")
+![ConfigPatternImage](https://prelimutens.com/main/babylonms/babylonmssite/en/img/patterns.png "BMS Design pattern")
 
 
 The Miniships can connect to either station or other miniships.
 The connection type switched between network or pipeline (radio or ipc)
 
-More information on Babylon website on (http://babylonms.com)
+More information on Babylon website on (https://prelimutens.com/main/babylonms/babylonmssite/doc/index.html)
 
